@@ -1750,10 +1750,10 @@ msgstr "Åtkomstnyckel-ID"
 msgid "Access to {objectLabelPlural} is set by roles, not record by record."
 msgstr "Åtkomst till {objectLabelPlural} anges av roller, inte post för post."
 
-#. js-lingui-id: rkbqAv
+#. js-lingui-id: udBcux
 #: src/modules/settings/mcp/utils/mcpSetup.ts
-msgid "Access your Twenty workspace through MCP"
-msgstr "Få åtkomst till din Twenty-arbetsyta via MCP"
+msgid "Access your Bullpen workspace through MCP"
+msgstr ""
 
 #. js-lingui-id: CrjDqe
 #: src/pages/auth/Authorize.tsx
@@ -2160,6 +2160,11 @@ msgstr "Lägg till block"
 msgid "Add block below"
 msgstr "Lägg till block nedanför"
 
+#. js-lingui-id: X4XDkL
+#: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
+msgid "Add Bullpen as a Streamable HTTP extension in Goose."
+msgstr ""
+
 #. js-lingui-id: sFY+gw
 #: src/modules/settings/billing/components/SettingsBillingTrialNoPaymentMethodBanner.tsx
 msgid "Add card"
@@ -2542,40 +2547,40 @@ msgstr "Lägg till leverantör av SSO-identitet"
 msgid "Add teammates"
 msgstr "Lägg till teammedlemmar"
 
-#. js-lingui-id: FKGcEL
+#. js-lingui-id: mFgpkQ
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Add the Twenty MCP server as a remote context server in Zed."
-msgstr "Lägg till Twenty MCP-servern som en fjärrkontextserver i Zed."
+msgid "Add the Bullpen MCP server as a remote context server in Zed."
+msgstr ""
 
-#. js-lingui-id: iA2nHX
+#. js-lingui-id: b2GCAj
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Add the Twenty MCP server from Augment Code settings."
-msgstr "Lägg till Twenty MCP-servern från inställningarna för Augment Code."
+msgid "Add the Bullpen MCP server from Augment Code settings."
+msgstr ""
 
-#. js-lingui-id: l+NzAk
+#. js-lingui-id: Ip8cNS
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Add the Twenty MCP server from Raycast's MCP commands or settings."
-msgstr "Lägg till Twenty MCP-servern från Raycasts MCP-kommandon eller -inställningar."
+msgid "Add the Bullpen MCP server from Raycast's MCP commands or settings."
+msgstr ""
 
-#. js-lingui-id: j6G/yI
+#. js-lingui-id: 4PbcXK
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Add the Twenty MCP server in Gemini CLI settings."
-msgstr "Lägg till Twenty MCP-servern i inställningarna för Gemini CLI."
+msgid "Add the Bullpen MCP server in Gemini CLI settings."
+msgstr ""
 
-#. js-lingui-id: /OyhlM
+#. js-lingui-id: 0mpXi8
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Add the Twenty MCP server to your LibreChat configuration file."
-msgstr "Lägg till Twenty MCP-servern i din LibreChat-konfigurationsfil."
+msgid "Add the Bullpen MCP server to your LibreChat configuration file."
+msgstr ""
 
-#. js-lingui-id: K0DXoj
+#. js-lingui-id: 0hO9JF
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Add the Twenty remote server with LM Studio's install link."
-msgstr "Lägg till Twenty-fjärrservern med LM Studios installationslänk."
+msgid "Add the Bullpen remote server with LM Studio's install link."
+msgstr ""
 
-#. js-lingui-id: BTFMKE
+#. js-lingui-id: KzX0Hv
 #: src/pages/settings/communications/SettingsWorkspaceCommunicationGroupChannelDetail.tsx
-msgid "Add these records at your DNS provider. Twenty checks them automatically."
-msgstr "Lägg till dessa poster hos din DNS-leverantör. Twenty kontrollerar dem automatiskt."
+msgid "Add these records at your DNS provider. Bullpen checks them automatically."
+msgstr ""
 
 #. js-lingui-id: Bc+ryO
 #: src/modules/related-record-paths/components/SettingsObjectRelatedRecordPathPicker.tsx
@@ -2607,11 +2612,6 @@ msgstr "Lägg till i lista"
 #: src/modules/settings/unsubscribe-topics/components/SettingsWorkspaceUnsubscribeTopicSection.tsx
 msgid "Add topic"
 msgstr "Lägg till ämne"
-
-#. js-lingui-id: 4D/zWv
-#: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Add Twenty as a Streamable HTTP extension in Goose."
-msgstr "Lägg till Twenty som ett Streamable HTTP-tillägg i Goose."
 
 #. js-lingui-id: XnwceV
 #: src/pages/settings/applications/components/SettingsApplicationRegistrationRedirectURIsInput.tsx
@@ -3958,10 +3958,10 @@ msgstr "applikationsvariabel"
 msgid "Applications"
 msgstr "Applikationer"
 
-#. js-lingui-id: q7rlQw
+#. js-lingui-id: X1hJtL
 #: src/pages/settings/applications/tabs/SettingsApplicationsAvailableTab.tsx
-msgid "Applications below have not been reviewed by Twenty. Use at your own risk."
-msgstr "Applikationerna nedan har inte granskats av Twenty. Använd på egen risk."
+msgid "Applications below have not been reviewed by Corgi. Use at your own risk."
+msgstr ""
 
 #. js-lingui-id: p98xmP
 #: src/modules/settings/admin-panel/components/SettingsAdminWorkspaceUsageLimitsSection.tsx
@@ -4656,10 +4656,10 @@ msgstr "Skapa automatiskt personposter när du tar emot eller skickar e-post"
 msgid "Automatically install this app on every newly created workspace"
 msgstr "Installera automatiskt den här appen på varje ny arbetsyta som skapas"
 
-#. js-lingui-id: MHsVk5
+#. js-lingui-id: sB0eWM
 #: src/pages/settings/ai/components/SettingsAiModelTiersPreview.tsx
-msgid "Automatically selected by Twenty for this mode."
-msgstr "Väljs automatiskt av Twenty för detta läge."
+msgid "Automatically selected by Bullpen for this mode."
+msgstr ""
 
 #. js-lingui-id: XFGV21
 #: src/pages/settings/applications/tabs/SettingsApplicationAutoUpdateSection.tsx
@@ -4921,10 +4921,10 @@ msgstr "Faktureringsintervall"
 msgid "Billing period"
 msgstr "Faktureringsperiod"
 
-#. js-lingui-id: xF/NXI
+#. js-lingui-id: 4gGH3D
 #: src/modules/settings/billing/hooks/useBillingPortalSession.ts
-msgid "Billing portal session error. Please retry or contact Twenty team"
-msgstr "Fel i sessionen för faktureringsportalen. Försök igen eller kontakta Twenty-teamet"
+msgid "Billing portal session error. Please retry or contact Corgi team"
+msgstr ""
 
 #. js-lingui-id: H++SIW
 #: src/modules/settings/billing/hooks/useBillingSubscriptionChangeWording.ts
@@ -5180,6 +5180,26 @@ msgstr "Punktlista"
 msgid "Bullet List"
 msgstr ""
 
+#. js-lingui-id: 3k7usz
+#: src/pages/onboarding/SyncEmails.tsx
+msgid "Bullpen adds the people you email and meet, and keeps them up to date without manual data entry."
+msgstr ""
+
+#. js-lingui-id: HYzYGC
+#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
+msgid "Bullpen fields"
+msgstr ""
+
+#. js-lingui-id: sPVNpx
+#: src/pages/settings/ai/components/SettingsAiModelsTab.tsx
+msgid "Bullpen fills each level with the best model that meets your requirements"
+msgstr ""
+
+#. js-lingui-id: zEDxOJ
+#: src/modules/onboarding/components/OnboardingInviteTeamSkipDialog.tsx
+msgid "Bullpen works better with your team"
+msgstr ""
+
 #. js-lingui-id: 9emr42
 #: src/modules/settings/logic-functions/components/tabs/SettingsLogicFunctionTriggersTab.tsx
 msgid "Bundled with {applicationName}"
@@ -5212,10 +5232,10 @@ msgstr "av {author}"
 msgid "by {trimmedAuthor}"
 msgstr "av {trimmedAuthor}"
 
-#. js-lingui-id: 8Pfllj
+#. js-lingui-id: mq27Bc
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
-msgid "By using Twenty, you agree to the"
-msgstr "Genom att använda Twenty godkänner du"
+msgid "By using Bullpen, you agree to the"
+msgstr ""
 
 #. js-lingui-id: 7l+dLC
 #: src/modules/marketplace/constants/PermissionFlagSummaryConfigs.ts
@@ -5818,11 +5838,11 @@ msgstr "Ändra tema till system"
 msgid "Changes"
 msgstr "Ändringar"
 
-#. js-lingui-id: OhVo1W
+#. js-lingui-id: Smz18P
 #: src/modules/settings/applications/components/SettingsApplicationIframeMediaPermissionsSection.tsx
 #: src/modules/settings/security/components/SettingsSecurityIframeMediaPermissions.tsx
-msgid "Changes saved. Reload open Twenty tabs to apply the updated permissions. Reloading ends active calls and recordings."
-msgstr "Ändringarna har sparats. Ladda om öppna Twenty-flikar för att tillämpa de uppdaterade behörigheterna. Omladdning avslutar aktiva samtal och inspelningar."
+msgid "Changes saved. Reload open Bullpen tabs to apply the updated permissions. Reloading ends active calls and recordings."
+msgstr ""
 
 #. js-lingui-id: oRH6Dq
 #: src/modules/metadata-error-handler/hooks/useMetadataErrorHandler.ts
@@ -5986,11 +6006,11 @@ msgstr "Kontrolleras endast när posten som denna regel tillhör sparas. Rediger
 msgid "Checking calendar availability…"
 msgstr "Kontrollerar kalenderns tillgänglighet…"
 
-#. js-lingui-id: SxwQE8
+#. js-lingui-id: PyWB36
 #: src/modules/settings/billing/hooks/useHandleCheckoutSession.ts
 #: src/modules/settings/billing/hooks/useHandleCheckoutSession.ts
-msgid "Checkout session error. Please retry or contact Twenty team"
-msgstr "Fel under betalningssession. Försök igen eller kontakta Twenty-teamet"
+msgid "Checkout session error. Please retry or contact Corgi team"
+msgstr ""
 
 #. js-lingui-id: SviKkE
 #: src/modules/localization/hooks/useLocaleOptions.ts
@@ -6999,6 +7019,16 @@ msgstr "Konfigurera sökning"
 msgid "Configure SMTP settings to send emails from your account."
 msgstr "Konfigurera SMTP-inställningar för att skicka e-post från ditt konto."
 
+#. js-lingui-id: rkIXVd
+#: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
+msgid "Configure the Bullpen MCP server manually in Cascade."
+msgstr ""
+
+#. js-lingui-id: /zKVNL
+#: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
+msgid "Configure the Bullpen MCP server manually in Cline."
+msgstr ""
+
 #. js-lingui-id: CcCy4C
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Configure the remote MCP server through Warp's agent settings."
@@ -7008,16 +7038,6 @@ msgstr "Konfigurera den fjärranslutna MCP-servern via Warps agentinställningar
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Configure the remote server in Amazon Q Developer's MCP settings."
 msgstr "Konfigurera den fjärranslutna servern i Amazon Q Developers MCP-inställningar."
-
-#. js-lingui-id: g1/8jH
-#: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Configure the Twenty MCP server manually in Cascade."
-msgstr "Konfigurera Twenty MCP-servern manuellt i Cascade."
-
-#. js-lingui-id: XiyvRh
-#: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Configure the Twenty MCP server manually in Cline."
-msgstr "Konfigurera Twenty MCP-servern manuellt i Cline."
 
 #. js-lingui-id: qA9AGQ
 #: src/modules/settings/domains/components/SettingsDomainRecords.tsx
@@ -7880,10 +7900,10 @@ msgstr "Räkna alla"
 msgid "Count by"
 msgstr "Räkna efter"
 
-#. js-lingui-id: EEqRLn
+#. js-lingui-id: yJPzmI
 #: src/modules/settings/workspace/components/ClickTrackingSwitch.tsx
-msgid "Count clicks by routing campaign links through Twenty before the original page."
-msgstr "Räkna klick genom att dirigera kampanjlänkar via Twenty före den ursprungliga sidan."
+msgid "Count clicks by routing campaign links through Bullpen before the original page."
+msgstr ""
 
 #. js-lingui-id: vQJINq
 #: src/modules/object-record/record-board/record-board-column/utils/getAggregateOperationLabel.ts
@@ -11717,10 +11737,10 @@ msgstr "Fel vid avbrytning av intervallbyte."
 msgid "Error while cancelling plan switching."
 msgstr "Fel vid avbrytning av planbyte."
 
-#. js-lingui-id: QmR+2U
+#. js-lingui-id: A7HiWa
 #: src/modules/settings/billing/hooks/useEndSubscriptionTrialPeriod.ts
-msgid "Error while ending trial period. Please contact Twenty team."
-msgstr "Fel vid avslutning av provperioden. Vänligen kontakta Twenty-teamet."
+msgid "Error while ending trial period. Please contact Corgi team."
+msgstr ""
 
 #. js-lingui-id: 5g78zo
 #: src/pages/settings/members/SettingsWorkspaceMember.tsx
@@ -11841,6 +11861,30 @@ msgstr "varje {stepNumStr} månader"
 msgid "every {stepNumStr} months, between {startMonth} and {endMonth}"
 msgstr "varje {stepNumStr} månader, mellan {startMonth} och {endMonth}"
 
+#. js-lingui-id: /+9//V
+#: src/modules/applications/utils/getStandardApplicationReadme.ts
+msgid ""
+"Every Bullpen workspace starts with this app. It defines the shape of your CRM: the core objects, how they relate to each other, and the views and record pages your team works in. Marketplace apps, AI agents and your own customizations all build on top of it.\n"
+"\n"
+"## ✨ What you get\n"
+"\n"
+"- **People & Companies**: your contacts and the accounts they belong to\n"
+"- **Opportunities**: your sales pipeline, stage by stage\n"
+"- **Notes & Tasks**: activity and follow-ups attached to any record\n"
+"- **Emails & Calendar events**: synced from your connected accounts and linked to the right records\n"
+"- **Workflows & Dashboards**: automation and reporting on top of your data\n"
+"\n"
+"## 📌 Good to know\n"
+"\n"
+"- Installed on every workspace and maintained by Corgi\n"
+"- Cannot be uninstalled: the rest of the workspace is built on it\n"
+"- Your own objects, fields and layouts live in the **Custom** app\n"
+"\n"
+"## 💳 Billing\n"
+"\n"
+"**Free**: no credits, no metering."
+msgstr ""
+
 #. js-lingui-id: AdpwiL
 #: src/modules/settings/roles/role-permissions/agent-chat-channels/components/SettingsRolePermissionsAgentChatChannelsSection.tsx
 msgid "Every channel, including the ones created later"
@@ -11872,49 +11916,6 @@ msgstr "varje minut"
 msgid "Every object of this workspace as CSV files in one zip, kept for 1 day. Works for suspended workspaces."
 msgstr "Alla objekt i den här arbetsytan som CSV-filer i en zip-fil, sparas i 1 dag. Fungerar för avstängda arbetsytor."
 
-#. js-lingui-id: SpXUci
-#: src/modules/applications/utils/getStandardApplicationReadme.ts
-msgid ""
-"Every Twenty workspace starts with this app. It defines the shape of your CRM: the core objects, how they relate to each other, and the views and record pages your team works in. Marketplace apps, AI agents and your own customizations all build on top of it.\n"
-"\n"
-"## ✨ What you get\n"
-"\n"
-"- **People & Companies**: your contacts and the accounts they belong to\n"
-"- **Opportunities**: your sales pipeline, stage by stage\n"
-"- **Notes & Tasks**: activity and follow-ups attached to any record\n"
-"- **Emails & Calendar events**: synced from your connected accounts and linked to the right records\n"
-"- **Workflows & Dashboards**: automation and reporting on top of your data\n"
-"\n"
-"## 📌 Good to know\n"
-"\n"
-"- Installed on every workspace and maintained by Twenty\n"
-"- Cannot be uninstalled: the rest of the workspace is built on it\n"
-"- Your own objects, fields and layouts live in the **Custom** app\n"
-"\n"
-"## 💳 Billing\n"
-"\n"
-"**Free**: no credits, no metering."
-msgstr ""
-"Varje Twenty-arbetsyta börjar med den här appen. Den definierar strukturen för ditt CRM: de centrala objekten, hur de förhåller sig till varandra samt de vyer och postsidor som ditt team arbetar i. Marketplace-appar, AI-agenter och dina egna anpassningar bygger alla ovanpå den.\n"
-"\n"
-"## ✨ Vad du får\n"
-"\n"
-"- **Personer och företag**: dina kontakter och de konton de tillhör\n"
-"- **Affärsmöjligheter**: din säljprocess, steg för steg\n"
-"- **Anteckningar och uppgifter**: aktivitet och uppföljningar kopplade till valfri post\n"
-"- **E-post och kalenderhändelser**: synkroniserade från dina anslutna konton och länkade till rätt poster\n"
-"- **Arbetsflöden och instrumentpaneler**: automatisering och rapportering ovanpå dina data\n"
-"\n"
-"## 📌 Bra att veta\n"
-"\n"
-"- Installerad på varje arbetsyta och underhålls av Twenty\n"
-"- Kan inte avinstalleras: resten av arbetsytan bygger på den\n"
-"- Dina egna objekt, fält och layouter finns i appen **Anpassad**\n"
-"\n"
-"## 💳 Fakturering\n"
-"\n"
-"**Gratis**: inga krediter, ingen förbrukningsmätning."
-
 #. js-lingui-id: PsQmAw
 #: src/modules/object-core/workflows/constants/CoreWorkflowVisibilityOptions.ts
 #: src/modules/object-record/object-options-dropdown/components/ObjectOptionsDropdownVisibilityContent.tsx
@@ -11934,7 +11935,7 @@ msgstr "Alla med åtkomst till {objectLabelPlural}"
 msgid "Everything"
 msgstr "Allt"
 
-#. js-lingui-id: BnV3Mw
+#. js-lingui-id: AuLHp5
 #: src/modules/applications/utils/getCustomApplicationReadme.ts
 msgid ""
 "Everything you build directly in this workspace lives here. Every object, field, view or automation you add on top of the Standard app is grouped under Custom, so your schema changes, interface changes and workspace-specific logic stay in one place.\n"
@@ -11949,29 +11950,12 @@ msgid ""
 "\n"
 "- Created with your workspace and unique to it\n"
 "- Cannot be uninstalled: it holds your workspace's customizations\n"
-"- Customizations you make from the Twenty interface are saved here automatically\n"
+"- Customizations you make from the Bullpen interface are saved here automatically\n"
 "\n"
 "## 💳 Billing\n"
 "\n"
 "**Free**: no credits, no metering."
 msgstr ""
-"Allt du bygger direkt i den här arbetsytan finns här. Varje objekt, fält, vy eller automatisering som du lägger till utöver Standard-appen grupperas under Anpassat, så att dina schemaändringar, gränssnittsändringar och arbetsytespecifika logik finns på ett och samma ställe.\n"
-"\n"
-"## ✨ Vad du får\n"
-"\n"
-"- **Anpassade objekt och fält**: din egen datamodell, bredvid standardobjekten\n"
-"- **Vyer, navigeringsobjekt och postlayouter**: skärmarna som formar hur ditt team arbetar\n"
-"- **Logikfunktioner, frontkomponenter och agenter**: automatisering och tillägg som är specifika för den här arbetsytan\n"
-"\n"
-"## 📌 Bra att veta\n"
-"\n"
-"- Skapas med din arbetsyta och är unik för den\n"
-"- Kan inte avinstalleras: den innehåller din arbetsytas anpassningar\n"
-"- Anpassningar som du gör i Twenty-gränssnittet sparas här automatiskt\n"
-"\n"
-"## 💳 Fakturering\n"
-"\n"
-"**Gratis**: inga krediter, ingen mätning."
 
 #. js-lingui-id: LG6l5T
 #: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/UserTableColumn.tsx
@@ -14505,10 +14489,10 @@ msgstr "Hög"
 msgid "Highlighted quotation"
 msgstr "Markerat citat"
 
-#. js-lingui-id: 1ETc0T
+#. js-lingui-id: aU2kOT
 #: src/pages/settings/community/SettingsCommunity.tsx
-msgid "Hire a partner to help you implement and customize Twenty."
-msgstr "Anlita en partner som hjälper dig att implementera och anpassa Twenty."
+msgid "Hire a partner to help you implement and customize Bullpen."
+msgstr ""
 
 #. js-lingui-id: i0qMbr
 #: src/modules/ai/components/AiChatNewThreadPageActions.tsx
@@ -14961,10 +14945,10 @@ msgstr "Importera endast valda mappar/etiketter"
 msgid "Import or add the MCP configuration from JetBrains settings."
 msgstr "Importera eller lägg till MCP-konfigurationen från JetBrains-inställningarna."
 
-#. js-lingui-id: e2aT+Z
+#. js-lingui-id: qfkx6c
 #: src/modules/getting-started/constants/GettingStartedImportPrompt.ts
-msgid "Import the attached files into Twenty. Work out which records they contain, then create them and link them together."
-msgstr "Importera de bifogade filerna till Twenty. Ta reda på vilka poster de innehåller, skapa dem och länka ihop dem."
+msgid "Import the attached files into Bullpen. Work out which records they contain, then create them and link them together."
+msgstr ""
 
 #. js-lingui-id: vXTVX9
 #: src/pages/onboarding/ImportContacts.tsx
@@ -18007,10 +17991,10 @@ msgstr "Modellinformation"
 msgid "Model is required"
 msgstr "Modell krävs"
 
-#. js-lingui-id: iaurWj
+#. js-lingui-id: vH4gMT
 #: src/pages/settings/ai/components/SettingsAiModelsTab.tsx
-msgid "Model used when you chat with Twenty"
-msgstr "Modell som används när du chattar med Twenty"
+msgid "Model used when you chat with Bullpen"
+msgstr ""
 
 #. js-lingui-id: //nm2/
 #: src/modules/settings/ai/utils/getSettingsAiTabs.ts
@@ -20486,10 +20470,10 @@ msgstr "Ett eller flera filter hänvisar till inaktiverade eller raderade fält 
 msgid "One per run"
 msgstr "En per körning"
 
-#. js-lingui-id: 1WZTTl
+#. js-lingui-id: 5vF3pc
 #: src/pages/settings/enterprise/SettingsEnterprise.tsx
-msgid "One subscription provides one Organization key that powers one production instance and one potential staging or test instance. To run a staging or test environment, install Twenty on a second server, activate it with this same Organization key, then register that server as a development instance. Development instances unlock premium features without extra billing and do not count toward your production seats."
-msgstr "Ett abonnemang ger en Organization-nyckel som driver en produktionsinstans och en möjlig staging- eller testinstans. Om du vill köra en staging- eller testmiljö installerar du Twenty på en andra server, aktiverar den med samma Organization-nyckel och registrerar sedan den servern som en utvecklingsinstans. Utvecklingsinstanser låser upp premiumfunktioner utan extra fakturering och räknas inte mot dina produktionsplatser."
+msgid "One subscription provides one Organization key that powers one production instance and one potential staging or test instance. To run a staging or test environment, install Bullpen on a second server, activate it with this same Organization key, then register that server as a development instance. Development instances unlock premium features without extra billing and do not count toward your production seats."
+msgstr ""
 
 #. js-lingui-id: ghcoqW
 #: src/pages/settings/ai/components/SettingsAiBehaviorSection.tsx
@@ -20516,10 +20500,10 @@ msgstr "Endast datum och deltagare kommer att delas med ditt team."
 msgid "Only enable for steps that are safe to run twice: a failed attempt may already have written data or sent messages."
 msgstr "Aktivera endast för steg som är säkra att köra två gånger: ett misslyckat försök kan redan ha skrivit data eller skickat meddelanden."
 
-#. js-lingui-id: KsHGCA
+#. js-lingui-id: WO2NAI
 #: src/modules/settings/billing/components/SettingsBillingPartnerCodeForm.tsx
-msgid "Only if a Twenty partner referred you. Once applied, it can't be changed."
-msgstr "Endast om en Twenty-partner hänvisade dig. När den har tillämpats kan den inte ändras."
+msgid "Only if a Corgi partner referred you. Once applied, it can't be changed."
+msgstr ""
 
 #. js-lingui-id: aluwJP
 #: src/modules/settings/data-model/object-details/components/SettingsUpdateDataModelObjectAboutForm.tsx
@@ -20648,6 +20632,11 @@ msgstr "Öppna en e-postredigerare för att redigera sidans stil."
 msgid "Open as link"
 msgstr "Öppna som länk"
 
+#. js-lingui-id: 1VliqW
+#: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
+msgid "Open Bullpen's official ChatGPT integration for your workspace."
+msgstr ""
+
 #. js-lingui-id: 6I7cJR
 #: src/modules/command-menu-item/engine-command/constants/EngineComponentKeyHeadlessComponentMap.tsx
 msgid "Open chat"
@@ -20660,10 +20649,10 @@ msgstr "Öppna chatt"
 msgid "Open chats in"
 msgstr "Öppna chattar i"
 
-#. js-lingui-id: n0vVgf
+#. js-lingui-id: OIf2wg
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Open Claude with the Twenty connector name and MCP URL prefilled."
-msgstr "Öppna Claude med Twenty-anslutningsnamn och MCP-URL förifyllda."
+msgid "Open Claude with the Bullpen connector name and MCP URL prefilled."
+msgstr ""
 
 #. js-lingui-id: N4OQXf
 #: src/modules/advanced-text-editor/components/AdvancedTextEditorTableHandleMenu.tsx
@@ -20675,10 +20664,10 @@ msgstr "Öppna kolumnmenyn"
 msgid "Open conversation"
 msgstr "Öppna konversationen"
 
-#. js-lingui-id: +n2jpB
+#. js-lingui-id: kv4SZm
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Open Cursor's MCP installer with the Twenty remote server config."
-msgstr "Öppna Cursors MCP-installationsprogram med Twenty:s fjärrserverkonfiguration."
+msgid "Open Cursor's MCP installer with the Bullpen remote server config."
+msgstr ""
 
 #. js-lingui-id: JvSHIq
 #: src/modules/getting-started/components/GettingStartedSidebarCard.tsx
@@ -20761,10 +20750,10 @@ msgstr "Öppna poster i"
 msgid "Open records on a dedicated page"
 msgstr "Öppna poster på en dedikerad sida"
 
-#. js-lingui-id: q170S2
+#. js-lingui-id: ER2S+/
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Open Replit with the Twenty remote server config."
-msgstr "Öppna Replit med Twenty:s fjärrserverkonfiguration."
+msgid "Open Replit with the Bullpen remote server config."
+msgstr ""
 
 #. js-lingui-id: iMBVhp
 #: src/modules/advanced-text-editor/components/AdvancedTextEditorTableHandleMenu.tsx
@@ -20790,11 +20779,6 @@ msgstr "Öppna inställningar"
 #: src/modules/sign-in-background-mock/components/BackgroundMockPage.tsx
 msgid "Open side panel"
 msgstr "Öppna sidopanelen"
-
-#. js-lingui-id: sBd/cl
-#: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
-msgid "Open Twenty's official ChatGPT integration for your workspace."
-msgstr "Öppna Twenty:s officiella ChatGPT-integration för din arbetsyta."
 
 #. js-lingui-id: tirDue
 #: src/modules/log-console/constants/LogConsoleSources.tsx
@@ -21288,10 +21272,10 @@ msgstr "Sidlayouter"
 msgid "Page name"
 msgstr "Sidnamn"
 
-#. js-lingui-id: NRvxzv
+#. js-lingui-id: xjsQ+t
 #: src/pages/not-found/NotFound.tsx
-msgid "Page Not Found | Twenty"
-msgstr "Sidan kunde inte hittas | Twenty"
+msgid "Page Not Found | Bullpen"
+msgstr ""
 
 #. js-lingui-id: QbrUIo
 #: src/modules/log-console/constants/LogConsoleSources.tsx
@@ -27092,13 +27076,13 @@ msgstr "Prenumeration"
 msgid "Subscription activated."
 msgstr "Prenumeration aktiverad."
 
-#. js-lingui-id: 0okvpx
+#. js-lingui-id: DXYltt
 #: src/modules/settings/billing/components/AddPaymentMethodForm.tsx
 #: src/modules/settings/billing/components/AddPaymentMethodForm.tsx
 #: src/modules/settings/billing/hooks/useSubmitSubscriptionPayment.ts
 #: src/modules/settings/billing/hooks/useSubmitSubscriptionPayment.ts
-msgid "Subscription error. Please retry or contact Twenty team"
-msgstr "Prenumerationsfel. Försök igen eller kontakta Twenty-teamet"
+msgid "Subscription error. Please retry or contact Corgi team"
+msgstr ""
 
 #. js-lingui-id: kSY/ji
 #: src/modules/settings/billing/hooks/useApplyBillingSubscriptionChange.ts
@@ -27719,10 +27703,10 @@ msgstr "API-slutpunkt för din OpenAI-kompatibla leverantör"
 msgid "The AWS region for Bedrock"
 msgstr "AWS-regionen för Bedrock"
 
-#. js-lingui-id: bEyeZg
+#. js-lingui-id: NtRgKd
 #: src/modules/applications/utils/getStandardApplicationDescription.ts
-msgid "The base data model every Twenty workspace runs on."
-msgstr "Den grundläggande datamodellen som varje Twenty-arbetsyta körs på."
+msgid "The base data model every Bullpen workspace runs on."
+msgstr ""
 
 #. js-lingui-id: 832YJ9
 #: src/modules/validation-rules/constants/ValidationRuleKeywords.ts
@@ -27749,10 +27733,10 @@ msgstr "Samtalsinspelningen bearbetas…"
 msgid "The code lets {memberName} sign in to this workspace once without their authenticator app. Using it removes their current authenticator and signs them out of their other sessions here. They will be notified by email."
 msgstr "Koden låter {memberName} logga in på den här arbetsytan en gång utan sin autentiseringsapp. När den används tas deras nuvarande autentiseringsmetod bort och de loggas ut från sina andra sessioner här. De meddelas via e-post."
 
-#. js-lingui-id: G3XY+D
+#. js-lingui-id: D5h7y2
 #: src/modules/settings/billing/components/SettingsBillingPartnerCodeForm.tsx
-msgid "The code of the Twenty partner who referred you"
-msgstr "Koden för den Twenty-partner som hänvisade dig"
+msgid "The code of the Corgi partner who referred you"
+msgstr ""
 
 #. js-lingui-id: aXzQ65
 #: src/modules/ai/components/AiChatCompactionIndicator.tsx
@@ -27911,10 +27895,10 @@ msgstr "Antalet objekt i listan, eller 0 om det inte är en lista."
 msgid "The page you're seeking is either gone or never was. Let's get you back on track"
 msgstr "Sidan du söker är antingen borta eller har aldrig funnits. Låt oss hjälpa dig att komma på rätt köl igen"
 
-#. js-lingui-id: Ya1wb4
+#. js-lingui-id: jhc8Y4
 #: src/pages/settings/legal/SettingsLegalDpaNew.tsx
-msgid "The PDF is pre-signed by Twenty and executed with your legal entity and authorized signatory."
-msgstr "PDF:en är försignerad av Twenty och ingås med din juridiska enhet och behörig undertecknare."
+msgid "The PDF is pre-signed by Corgi and executed with your legal entity and authorized signatory."
+msgstr ""
 
 #. js-lingui-id: iz994T
 #: src/modules/ai/components/AiChatApprovalMergeReview.tsx
@@ -28222,11 +28206,11 @@ msgstr "Den här applikationen är inte tillgänglig på marknadsplatsen. Den ka
 msgid "This application is not installed on this workspace. It may have been uninstalled or the link is incorrect."
 msgstr "Den här applikationen är inte installerad på den här arbetsytan. Den kan ha avinstallerats eller så är länken felaktig."
 
-#. js-lingui-id: +EhakQ
+#. js-lingui-id: DCAZzp
 #: src/modules/marketplace/components/SettingsApplicationInstallPermissionValidationModal.tsx
 #: src/pages/settings/applications/SettingsAvailableApplicationDetails.tsx
-msgid "This application is not listed on the marketplace and has not been reviewed by Twenty. Use at your own risk."
-msgstr "Den här appen är inte listad på marknadsplatsen och har inte granskats av Twenty. Använd den på egen risk."
+msgid "This application is not listed on the marketplace and has not been reviewed by Corgi. Use at your own risk."
+msgstr ""
 
 #. js-lingui-id: X7w5n6
 #: src/pages/settings/applications/tabs/SettingsApplicationRegistrationDistributionTab.tsx
@@ -29315,26 +29299,6 @@ msgstr "Gör true till false och false till true."
 #: src/pages/settings/ai/constants/SettingsAiAssistantColorLabels.ts
 msgid "Turquoise"
 msgstr "Turkos"
-
-#. js-lingui-id: 8pmRvi
-#: src/pages/onboarding/SyncEmails.tsx
-msgid "Twenty adds the people you email and meet, and keeps them up to date without manual data entry."
-msgstr "Twenty lägger till personerna du skickar e-post till och träffar, och håller dem uppdaterade utan manuell datainmatning."
-
-#. js-lingui-id: JnaRPe
-#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
-msgid "Twenty fields"
-msgstr "Twenty-fält"
-
-#. js-lingui-id: pNo8xt
-#: src/pages/settings/ai/components/SettingsAiModelsTab.tsx
-msgid "Twenty fills each level with the best model that meets your requirements"
-msgstr "Twenty fyller varje nivå med den bästa modellen som uppfyller dina krav"
-
-#. js-lingui-id: qUadjH
-#: src/modules/onboarding/components/OnboardingInviteTeamSkipDialog.tsx
-msgid "Twenty works better with your team"
-msgstr "Twenty fungerar bättre med ditt team"
 
 #. js-lingui-id: YIjS4q
 #: src/modules/ai/components/SettingsAgentModelCapabilities.tsx
@@ -31472,10 +31436,10 @@ msgstr "Veckovis"
 msgid "weeks"
 msgstr ""
 
-#. js-lingui-id: nTuObL
+#. js-lingui-id: vGCIKY
 #: src/pages/auth/SignInUp.tsx
-msgid "Welcome to Twenty"
-msgstr "Välkommen till Twenty"
+msgid "Welcome to Bullpen"
+msgstr ""
 
 #. js-lingui-id: t8ZvkC
 #: src/modules/onboarding/components/WorkspaceSetupChatPreamble.tsx

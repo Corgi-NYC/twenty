@@ -65,6 +65,14 @@
 
 [data-embedded='true'] [data-page-header] > :last-child {
   grid-column: 2;
+  /* The actions group (Create, more) must keep its natural width next to the title. */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: end;
+  min-width: max-content;
+  width: auto;
+  overflow: visible;
 }
 
 [data-embedded='true'] [data-page-header]:has(> [data-page-title]) > :last-child {
