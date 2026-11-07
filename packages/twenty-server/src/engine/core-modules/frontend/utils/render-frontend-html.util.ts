@@ -10,15 +10,18 @@ export const renderFrontendHtml = ({
   template,
   clientConfig,
   iframeMediaPermissions,
+  frontendConfig = {},
 }: {
   template: string;
+  frontendConfig?: Record<string, string>;
   clientConfig: object;
   iframeMediaPermissions: IframeMediaPermission[];
 }): string =>
   template
     .replace(
       /<!-- BEGIN: Twenty Config -->[\s\S]*?<!-- END: Twenty Config -->/,
-      '<script id="twenty-env-config">window._env_ = {};</script>',
+      () =>
+        `<script id="twenty-env-config">window._env_ = ${serializeJsonForHtmlScript(frontendConfig)};</script>`,
     )
     .replace(
       '</head>',

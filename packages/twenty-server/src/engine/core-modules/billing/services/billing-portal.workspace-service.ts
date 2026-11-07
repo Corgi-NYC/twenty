@@ -419,7 +419,7 @@ export class BillingPortalWorkspaceService {
     const cancelUrl = frontBaseUrl.toString();
 
     if (successUrlPath) {
-      frontBaseUrl.pathname = successUrlPath;
+      frontBaseUrl.pathname = `${frontBaseUrl.pathname.replace(/\/$/, '')}/${successUrlPath.replace(/^\//, '')}`;
     }
     const successUrl = frontBaseUrl.toString();
 
@@ -533,6 +533,15 @@ export class BillingPortalWorkspaceService {
 
     if (resolvedUrl.origin !== frontBaseUrl.origin) {
       return frontBaseUrl.toString();
+    }
+
+    const basePath = frontBaseUrl.pathname.replace(/\/$/, '');
+
+    if (
+      resolvedUrl.pathname !== basePath &&
+      !resolvedUrl.pathname.startsWith(`${basePath}/`)
+    ) {
+      resolvedUrl.pathname = `${basePath}${resolvedUrl.pathname}`;
     }
 
     return resolvedUrl.toString();

@@ -1,3 +1,4 @@
+import { useIsEmbedded } from '@/app/hooks/useIsEmbedded';
 import { GettingStartedSidebarCard } from '@/getting-started/components/GettingStartedSidebarCard';
 import { useIsSettingsDrawer } from '@/navigation/hooks/useIsSettingsDrawer';
 
@@ -18,10 +19,11 @@ export const AppNavigationDrawer = ({
   className,
 }: AppNavigationDrawerProps) => {
   const isMobile = useIsMobile();
+  const isEmbedded = useIsEmbedded();
   const isSettingsDrawer = useIsSettingsDrawer();
 
   // The main navigation is the home page on mobile, not a drawer.
-  if (isMobile && !isSettingsDrawer) {
+  if (isEmbedded || (isMobile && !isSettingsDrawer)) {
     return null;
   }
 

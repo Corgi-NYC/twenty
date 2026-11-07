@@ -12,6 +12,7 @@ import { type SocialSsoState } from 'src/engine/core-modules/auth/types/social-s
 import { isMicrosoftOAuthTransientError } from 'src/engine/core-modules/auth/utils/is-microsoft-oauth-transient-error.util';
 import { WorkspaceDomainsService } from 'src/engine/core-modules/domain/workspace-domains/services/workspace-domains.service';
 import { GuardRedirectService } from 'src/engine/core-modules/guard-redirect/services/guard-redirect.service';
+import { TwentyConfigService } from 'src/engine/core-modules/twenty-config/twenty-config.service';
 import { WorkspaceEntity } from 'src/engine/core-modules/workspace/workspace.entity';
 
 type SocialSsoStateWithRetry = SocialSsoState & {
@@ -22,6 +23,7 @@ type SocialSsoStateWithRetry = SocialSsoState & {
 export class MicrosoftOAuthGuard extends AuthGuard('microsoft') {
   constructor(
     private readonly guardRedirectService: GuardRedirectService,
+    private readonly twentyConfigService: TwentyConfigService,
     @InjectRepository(WorkspaceEntity)
     private readonly workspaceRepository: Repository<WorkspaceEntity>,
     private readonly workspaceDomainsService: WorkspaceDomainsService,
@@ -83,7 +85,9 @@ export class MicrosoftOAuthGuard extends AuthGuard('microsoft') {
       return false;
     }
 
-    const url = new URL(`/${ApiPath.Auth}/microsoft`, 'http://localhost');
+    const url = new URL(
+      `${this.twentyConfigService.get('SERVER_URL').replace(/\/$/, '')}/${ApiPath.Auth}/microsoft`,
+    );
 
     url.searchParams.set('oauthRetryCount', String(oauthRetryCount + 1));
 

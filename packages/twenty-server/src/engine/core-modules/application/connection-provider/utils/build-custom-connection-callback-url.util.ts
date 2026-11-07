@@ -8,8 +8,7 @@ export const buildAppCustomConnectionCallbackUrl = ({
   state: string;
 }): string => {
   const callbackUrl = new URL(
-    `/${ApiPath.Auth}/apps/custom/callback`,
-    serverUrl,
+    `${serverUrl.replace(/\/$/, '')}/${ApiPath.Auth}/apps/custom/callback`,
   );
 
   callbackUrl.searchParams.set('state', state);

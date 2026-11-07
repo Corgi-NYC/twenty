@@ -73,6 +73,9 @@ RUN yarn workspaces focus --production twenty-emails twenty-shared twenty-client
 
 FROM front-deps AS twenty-front-build
 
+ARG FRONTEND_BASE_PATH=/
+ENV VITE_FRONTEND_BASE_PATH=$FRONTEND_BASE_PATH
+
 COPY ./packages/twenty-front /app/packages/twenty-front
 COPY ./packages/twenty-front-component-renderer /app/packages/twenty-front-component-renderer
 COPY ./packages/twenty-ui /app/packages/twenty-ui
@@ -83,8 +86,8 @@ RUN npx nx run twenty-front:lingui:extract && \
     npx nx run twenty-front:lingui:compile
 # To skip the memory-intensive frontend build, pre-build on the host:
 #   npx nx build twenty-front
-# The check below will use packages/twenty-front/build/ if it already exists.
-RUN if [ -d /app/packages/twenty-front/build ]; then \
+# Pre-built host assets are only reused for the default base path.
+RUN if [ -d /app/packages/twenty-front/build ] && [ "$FRONTEND_BASE_PATH" = "/" ]; then \
       echo "Using pre-built frontend from host"; \
     else \
       NODE_OPTIONS="--max-old-space-size=8192" npx nx build twenty-front; \

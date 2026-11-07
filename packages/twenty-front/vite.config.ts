@@ -101,7 +101,13 @@ export default defineConfig(({ mode }) => {
     console.log(`VITE_BUILD_SOURCEMAP: ${VITE_BUILD_SOURCEMAP}`);
   }
 
+  const frontendBasePath = (env.VITE_FRONTEND_BASE_PATH || '/')
+    .split('/')
+    .filter(Boolean)
+    .join('/');
+
   return {
+    base: frontendBasePath ? `/${frontendBasePath}/` : '/',
     root: __dirname,
     cacheDir: '../../node_modules/.vite/packages/twenty-front',
 

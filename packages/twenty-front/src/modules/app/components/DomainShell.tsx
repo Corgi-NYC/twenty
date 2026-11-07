@@ -1,5 +1,8 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
+import { REACT_APP_FRONTEND_BASE_PATH } from '~/config';
 import { BrowserRouter } from 'react-router-dom';
 
+import { useIsEmbedded } from '@/app/hooks/useIsEmbedded';
 import { RootApp } from '@/app/components/RootApp';
 import { SharedAppProviders } from '@/app/components/SharedAppProviders';
 import { WorkspaceApp } from '@/app/components/WorkspaceApp';
@@ -12,6 +15,7 @@ import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomState
 import { UserOrMetadataLoader } from '~/loading/components/UserOrMetadataLoader';
 
 export const DomainShell = () => {
+  useIsEmbedded();
   const { isLoadedOnce } = useAtomStateValue(clientConfigApiStatusState);
   const isMultiWorkspaceEnabled = useAtomStateValue(
     isMultiWorkspaceEnabledState,
@@ -20,9 +24,12 @@ export const DomainShell = () => {
 
   if (!isLoadedOnce) {
     return (
-      <BrowserRouter useTransitions={false}>
+      <BrowserRouter
+        basename={REACT_APP_FRONTEND_BASE_PATH}
+        useTransitions={false}
+      >
         <SharedAppProviders>
-          {isOnOnboardingTransitionPath(window.location.pathname) ? (
+          {isOnOnboardingTransitionPath(getFrontendPathname()) ? (
             <OnboardingPageLoader />
           ) : (
             <UserOrMetadataLoader />

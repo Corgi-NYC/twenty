@@ -1,3 +1,4 @@
+import { resolveFrontendUrl } from '~/utils/frontendBasePath';
 import { isNonEmptyString } from '@sniptt/guards';
 import { type MouseEvent } from 'react';
 
@@ -41,7 +42,7 @@ export const RoundedLink = ({
         onClick={handleClick}
         render={
           <a
-            href={getSafeUrl(href)}
+            href={getSafeUrl(resolveFrontendUrl(href))}
             target="_blank"
             rel="noreferrer"
             className={className}

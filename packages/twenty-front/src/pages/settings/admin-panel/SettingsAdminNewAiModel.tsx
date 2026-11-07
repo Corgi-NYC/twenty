@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { ADD_MODEL_TO_PROVIDER } from '@/settings/admin-panel/ai/graphql/mutations/addModelToProvider';
 import { GET_ADMIN_AI_MODELS } from '@/settings/admin-panel/ai/graphql/queries/getAdminAiModels';
 import { GET_AI_PROVIDERS } from '@/settings/admin-panel/ai/graphql/queries/getAiProviders';
@@ -348,7 +349,7 @@ export const SettingsAdminNewAiModel = () => {
               status="error"
               action={
                 <InlineBanner.Action
-                  href={getSettingsPath(SettingsPath.AdminPanelOrganization)}
+                  href={addFrontendBasePath(getSettingsPath(SettingsPath.AdminPanelOrganization))}
                   nativeButton={false}
                   role="link"
                   render={

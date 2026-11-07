@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { ToastOnQueryErrorEffect } from '@/apollo/components/ToastOnQueryErrorEffect';
 import { currentWorkspaceState } from '@/auth/states/currentWorkspaceState';
 import { SettingsRolesQueryEffect } from '@/settings/roles/components/SettingsRolesQueryEffect';
@@ -130,7 +131,7 @@ export const SettingsWorkspaceMembersInviteTab = () => {
               description={t`Share this link to invite users to join your workspace`}
             />
             <WorkspaceInviteLink
-              inviteLink={`${window.location.origin}/invite/${currentWorkspace?.inviteHash}`}
+              inviteLink={`${window.location.origin}${addFrontendBasePath(`/invite/${currentWorkspace?.inviteHash}`)}`}
             />
           </Section.Root>
         )}

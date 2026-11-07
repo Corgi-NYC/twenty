@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { useMutation } from '@apollo/client/react';
 import { useStore } from 'jotai';
 import { useCallback } from 'react';
@@ -16,7 +17,7 @@ type StoredImpersonationSession = {
 
 // A full reload avoids enumerating every user-scoped atom, localStorage key and Apollo cache entry.
 const reloadWithSession = (returnPath: string) => {
-  window.location.assign(returnPath);
+  window.location.assign(addFrontendBasePath(returnPath));
 };
 
 export const useImpersonationSession = () => {

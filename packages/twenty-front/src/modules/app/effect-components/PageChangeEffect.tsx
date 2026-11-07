@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { useExecuteTasksOnAnyLocationChange } from '@/app/hooks/useExecuteTasksOnAnyLocationChange';
 import { useWorkspaceRouteObjects } from '@/app/routing/components/WorkspaceRouteObjectsProvider';
 import { isAppEffectRedirectEnabledState } from '@/auth/states/isAppEffectRedirectEnabledState';
@@ -167,7 +168,7 @@ export const PageChangeEffect = () => {
         !isOnAuthOrOnboardingPage
       ) {
         saveReturnToPath(
-          `${window.location.pathname}${window.location.search}${window.location.hash}`,
+          `${getFrontendPathname()}${window.location.search}${window.location.hash}`,
         );
       }
 

@@ -16,7 +16,12 @@ export const buildUrlWithPathnameAndSearchParams = ({
   const url = baseUrl;
 
   if (pathname) {
-    url.pathname = pathname;
+    const basePath = url.pathname.replace(/\/$/, '');
+
+    url.pathname =
+      pathname === basePath || pathname.startsWith(`${basePath}/`)
+        ? pathname
+        : `${basePath}/${pathname.replace(/^\//, '')}`;
   }
 
   if (searchParams) {

@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { isOnOnboardingVerifyPath } from '@/auth/utils/isOnOnboardingVerifyPath';
 import { OnboardingPulsingLogo } from '@/onboarding/components/OnboardingPulsingLogo';
 import { styled } from '@linaria/react';
@@ -16,7 +17,7 @@ const StyledContainer = styled.div`
 // No logo: the verify screen renders its own, which would flash twice on cold boot.
 export const OnboardingPageLoader = () => (
   <StyledContainer>
-    {!isOnOnboardingVerifyPath(window.location.pathname) && (
+    {!isOnOnboardingVerifyPath(getFrontendPathname()) && (
       <OnboardingPulsingLogo />
     )}
   </StyledContainer>

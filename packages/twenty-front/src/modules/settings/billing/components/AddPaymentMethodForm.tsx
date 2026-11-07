@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { currentUserState } from '@/auth/states/currentUserState';
 import { getToastOptionsFromError } from '@/error-handler/utils/getToastOptionsFromError';
 import { START_SUBSCRIPTION_AFTER_PAYMENT_METHOD_QUERY_PARAM } from '@/settings/billing/constants/StartSubscriptionAfterPaymentMethodQueryParam';
@@ -60,7 +61,10 @@ const AddPaymentMethodFormContent = ({
   const buildReturnUrl = () => {
     const basePath =
       finalRedirectPath ?? `${location.pathname}${location.search}`;
-    const returnUrl = new URL(basePath, window.location.origin);
+    const returnUrl = new URL(
+      addFrontendBasePath(basePath),
+      window.location.origin,
+    );
 
     if (shouldStartSubscriptionAfterPaymentMethod) {
       returnUrl.searchParams.set(

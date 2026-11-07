@@ -1,3 +1,4 @@
+import { useIsEmbedded } from '@/app/hooks/useIsEmbedded';
 import { AppErrorBoundary } from '@/error-handler/components/AppErrorBoundary';
 import { AppFullScreenErrorFallback } from '@/error-handler/components/AppFullScreenErrorFallback';
 import { AppPageErrorFallback } from '@/error-handler/components/AppPageErrorFallback';
@@ -64,6 +65,7 @@ const StyledMainContainer = styled.div`
 
 export const DefaultLayout = () => {
   const isMobile = useIsMobile();
+  const isEmbedded = useIsEmbedded();
 
   return (
     <>
@@ -83,7 +85,7 @@ export const DefaultLayout = () => {
                 </StyledMainContainer>
               </PageDragDropProvider>
             </StyledPageContainer>
-            {isMobile && <MobileNavigationBar />}
+            {isMobile && !isEmbedded && <MobileNavigationBar />}
           </AppErrorBoundary>
         </StyledLayout>
       </FileUploadProvider>

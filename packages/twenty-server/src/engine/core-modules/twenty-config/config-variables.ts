@@ -1233,6 +1233,16 @@ export class ConfigVariables {
 
   @ConfigVariablesMetadata({
     group: ConfigVariablesGroup.SERVER_CONFIG,
+    description: 'Browser path prefix for the frontend application',
+    type: ConfigVariableType.STRING,
+    isEnvOnly: true,
+  })
+  @IsString()
+  @IsOptional()
+  FRONTEND_BASE_PATH = '/';
+
+  @ConfigVariablesMetadata({
+    group: ConfigVariablesGroup.SERVER_CONFIG,
     description:
       'Direct HTTPS origin URL for deployments that publish frontend HTML separately. Leave unset for standard self-hosted installations to use bundled HTML.',
     type: ConfigVariableType.STRING,

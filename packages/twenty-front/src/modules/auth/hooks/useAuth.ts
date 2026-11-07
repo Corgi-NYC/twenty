@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import {
   useApolloClient,
   useLazyQuery,
@@ -135,7 +136,7 @@ export const useAuth = () => {
     clearSessionGeneration();
     clearSessionLocalStorageKeys();
     setLastAuthenticateWorkspaceDomain(null);
-    window.location.assign(AppPath.SignInUp);
+    window.location.assign(addFrontendBasePath(AppPath.SignInUp));
   }, [store, setLastAuthenticateWorkspaceDomain]);
 
   const navigateAfterMultiWorkspaceSignInUp = useCallback(

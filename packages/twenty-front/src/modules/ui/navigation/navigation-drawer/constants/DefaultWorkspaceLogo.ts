@@ -1,2 +1,2 @@
 export const DEFAULT_WORKSPACE_LOGO =
-  '/images/integrations/twenty-logo.svg';
+  `${import.meta.env.BASE_URL}images/integrations/twenty-logo.svg`;

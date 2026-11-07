@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { AppPath } from 'twenty-shared/types';
 import { isDefined, isValidUuid } from 'twenty-shared/utils';
 import { useStore } from 'jotai';
@@ -38,7 +39,7 @@ export const useNavigateToAiChatPage = () => {
           // Read from the window rather than useLocation so that opening a new
           // chat does not require a router context from every caller of
           // useSwitchToNewAiChat, front components included.
-          returnLocation: `${window.location.pathname}${window.location.search}${window.location.hash}`,
+          returnLocation: `${getFrontendPathname()}${window.location.search}${window.location.hash}`,
         },
       },
     );

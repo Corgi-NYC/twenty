@@ -7,7 +7,7 @@ export const buildServerUrl = ({
 }) => {
   const url = new URL(serverUrl);
 
-  url.pathname = pathname;
+  url.pathname = `${url.pathname.replace(/\/$/, '')}/${pathname.replace(/^\//, '')}`;
 
   return url.toString();
 };

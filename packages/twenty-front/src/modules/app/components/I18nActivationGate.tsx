@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { isOnOnboardingTransitionPath } from '@/auth/utils/isOnOnboardingTransitionPath';
 import { OnboardingPageLoader } from '@/onboarding/components/OnboardingPageLoader';
 import { i18n } from '@lingui/core';
@@ -27,7 +28,7 @@ export const I18nActivationGate = ({ children }: I18nActivationGateProps) => {
   }, []);
 
   if (!isLocaleActivated) {
-    return isOnOnboardingTransitionPath(window.location.pathname) ? (
+    return isOnOnboardingTransitionPath(getFrontendPathname()) ? (
       <OnboardingPageLoader />
     ) : null;
   }

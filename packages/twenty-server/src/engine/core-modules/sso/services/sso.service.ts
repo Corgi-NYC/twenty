@@ -190,7 +190,7 @@ export class SsoService {
   ) {
     const callbackURL = new URL(this.twentyConfigService.get('SERVER_URL'));
 
-    callbackURL.pathname = `/auth/${identityProvider.type.toLowerCase()}/callback`;
+    callbackURL.pathname = `${callbackURL.pathname.replace(/\/$/, '')}/auth/${identityProvider.type.toLowerCase()}/callback`;
 
     if (identityProvider.type === IdentityProviderType.SAML) {
       callbackURL.pathname += `/${identityProvider.id}`;
@@ -207,7 +207,7 @@ export class SsoService {
       this.twentyConfigService.get('SERVER_URL'),
     );
 
-    authorizationUrl.pathname = `/auth/${identityProvider.type.toLowerCase()}/login/${identityProvider.id}`;
+    authorizationUrl.pathname = `${authorizationUrl.pathname.replace(/\/$/, '')}/auth/${identityProvider.type.toLowerCase()}/login/${identityProvider.id}`;
 
     if (searchParams) {
       Object.entries(searchParams).forEach(([key, value]) => {

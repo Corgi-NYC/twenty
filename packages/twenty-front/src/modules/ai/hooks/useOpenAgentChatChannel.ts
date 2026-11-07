@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { useStore } from 'jotai';
 import { useCallback } from 'react';
 import { AppPath } from 'twenty-shared/types';
@@ -41,7 +42,7 @@ export const useOpenAgentChatChannel = () => {
       });
       navigate(AppPath.AiChatInbox, { threadId: null }, undefined, {
         replace: isMatchingPathname(
-          window.location.pathname,
+          getFrontendPathname(),
           getAppPath(AppPath.AiChatInbox, { threadId: null }),
         ),
       });

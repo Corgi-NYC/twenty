@@ -1,6 +1,7 @@
+import { REACT_APP_FRONTEND_BASE_PATH } from '~/config';
 import { lazy, useMemo } from 'react';
 
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, type RouteObject } from 'react-router-dom';
 import { AppPath } from 'twenty-shared/types';
 
 import { LazyRoute } from '@/app/components/LazyRoute';
@@ -105,7 +106,7 @@ const createWorkspaceAppRouter = ({
     isAdminPageEnabled,
   });
 
-  return createBrowserRouter([
+  const routes: RouteObject[] = [
     {
       element: (
         <WorkspaceRouteObjectsProvider routeObjects={workspaceRouteObjects} />
@@ -255,7 +256,9 @@ const createWorkspaceAppRouter = ({
         },
       ],
     },
-  ]);
+  ];
+
+  return createBrowserRouter(routes, { basename: REACT_APP_FRONTEND_BASE_PATH });
 };
 
 export const useCreateWorkspaceAppRouter = ({

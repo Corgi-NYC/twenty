@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { useSelectAiChatThread } from '@/ai/hooks/useSelectAiChatThread';
 import { useNavigateToAiChatPage } from '@/ai/hooks/useNavigateToAiChatPage';
 import { useOpenAskAiPageInSidePanel } from '@/side-panel/hooks/useOpenAskAiPageInSidePanel';
@@ -23,7 +24,7 @@ export const useAiChatThreadClick = (
     selectAiChatThread(thread.id);
 
     const isOnChatPage =
-      isCurrentPathAiChatPage() || isAiChatInboxPath(window.location.pathname);
+      isCurrentPathAiChatPage() || isAiChatInboxPath(getFrontendPathname());
 
     if (isOnChatPage) {
       return;

@@ -23,5 +23,5 @@ const StyledLogo = styled.img`
 `;
 
 export const OnboardingPulsingLogo = () => (
-  <StyledLogo src="/images/integrations/twenty-logo.svg" alt="" />
+  <StyledLogo src={`${import.meta.env.BASE_URL}images/integrations/twenty-logo.svg`} alt="" />
 );

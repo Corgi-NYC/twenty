@@ -4,4 +4,4 @@ import { ApiPath } from 'twenty-shared/types';
 // signed `state` parameter, so a single redirect URL configured at the
 // OAuth provider serves every workspace.
 export const buildAppOAuthCallbackUrl = (serverUrl: string): string =>
-  new URL(`/${ApiPath.Auth}/apps/callback`, serverUrl).toString();
+  new URL(`${serverUrl.replace(/\/$/, '')}/${ApiPath.Auth}/apps/callback`).toString();

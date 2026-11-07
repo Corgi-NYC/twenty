@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { isMultiWorkspaceEnabledState } from '@/client-config/states/isMultiWorkspaceEnabledState';
 import { useReadDefaultDomainFromConfiguration } from '@/domain-manager/hooks/useReadDefaultDomainFromConfiguration';
 import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomStateValue';
@@ -21,9 +22,11 @@ export const useCopyMarketplaceAppLink = () => {
       url.hostname = defaultDomain;
     }
 
-    url.pathname = getSettingsPath(SettingsPath.AvailableApplicationDetail, {
-      availableApplicationId: universalIdentifier,
-    });
+    url.pathname = addFrontendBasePath(
+      getSettingsPath(SettingsPath.AvailableApplicationDetail, {
+        availableApplicationId: universalIdentifier,
+      }),
+    );
 
     copyToClipboard(url.toString(), t`Link copied to clipboard`);
   };

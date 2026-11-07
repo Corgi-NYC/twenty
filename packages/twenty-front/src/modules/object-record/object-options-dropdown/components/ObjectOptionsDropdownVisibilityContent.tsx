@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { ListItemButton } from 'twenty-ui/components/navigation';
 import { useObjectOptionsDropdown } from '@/object-record/object-options-dropdown/hooks/useObjectOptionsDropdown';
 import { useHasPermissionFlag } from '@/settings/roles/hooks/useHasPermissionFlag';
@@ -60,7 +61,7 @@ export const ObjectOptionsDropdownVisibilityContent = () => {
 
   const handleCopyLink = async () => {
     const canonicalViewUrl = new URL(
-      createPath(location),
+      addFrontendBasePath(createPath(location)),
       window.location.origin,
     ).toString();
     await copyToClipboard(canonicalViewUrl, t`Link copied to clipboard`);

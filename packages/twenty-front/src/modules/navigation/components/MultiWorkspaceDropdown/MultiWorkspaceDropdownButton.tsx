@@ -1,3 +1,4 @@
+import { useIsEmbedded } from '@/app/hooks/useIsEmbedded';
 import { DropdownContent } from '@/ui/layout/dropdown/components/DropdownContent';
 import { DropdownRoot } from '@/ui/layout/dropdown/components/DropdownRoot';
 import { MultiWorkspaceDropdownClickableComponent } from '@/navigation/components/MultiWorkspaceDropdown/internal/MultiWorkspaceDropdownClickableComponent';
@@ -23,7 +24,12 @@ export const MultiWorkspaceDropdownButton = ({
   shouldHideLabel = false,
 }: MultiWorkspaceDropdownButtonProps) => {
   const isMobile = useIsMobile();
+  const isEmbedded = useIsEmbedded();
   const labeledTriggerAlignOffset = isMobile ? -5 : 5;
+
+  if (isEmbedded) {
+    return null;
+  }
 
   return (
     <DropdownRoot dropdownId={MULTI_WORKSPACE_DROPDOWN_ID} type="menu">

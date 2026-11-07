@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { captchaTokenState } from '@/captcha/states/captchaTokenState';
 import { isRequestingCaptchaTokenState } from '@/captcha/states/isRequestingCaptchaTokenState';
 import { isCaptchaRequiredForPath } from '@/captcha/utils/isCaptchaRequiredForPath';
@@ -16,7 +17,7 @@ export const useRequestFreshCaptchaToken = () => {
   );
 
   const requestFreshCaptchaToken = useCallback(async () => {
-    if (!isCaptchaRequiredForPath(window.location.pathname)) {
+    if (!isCaptchaRequiredForPath(getFrontendPathname())) {
       return;
     }
 

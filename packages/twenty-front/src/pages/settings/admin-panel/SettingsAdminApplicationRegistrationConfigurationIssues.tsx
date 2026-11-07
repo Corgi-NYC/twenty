@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { currentWorkspaceState } from '@/auth/states/currentWorkspaceState';
 import { useApolloAdminClient } from '@/settings/admin-panel/apollo/hooks/useApolloAdminClient';
 import { CLAIM_APPLICATION_REGISTRATION_OWNERSHIP_MODAL_ID } from '@/settings/admin-panel/apps/constants/ClaimApplicationRegistrationOwnershipModalId';
@@ -56,7 +57,7 @@ const MissingRequiredServerVariablesBanner = ({
       status="error"
       action={
         <InlineBanner.Action
-          href={`${location.pathname}${location.search}#config`}
+          href={addFrontendBasePath(`${location.pathname}${location.search}#config`)}
           nativeButton={false}
           role="link"
           render={
@@ -132,7 +133,7 @@ const NotInstalledOnOwnerWorkspaceBanner = ({
         status="error"
         action={
           <InlineBanner.Action
-            href={installPath}
+            href={addFrontendBasePath(installPath)}
             nativeButton={false}
             role="link"
             render={<Link to={installPath} />}
@@ -157,7 +158,7 @@ const NotInstalledOnOwnerWorkspaceBanner = ({
       status="error"
       action={
         <InlineBanner.Action
-          href={ownerWorkspacePath}
+          href={addFrontendBasePath(ownerWorkspacePath)}
           nativeButton={false}
           role="link"
           render={<Link to={ownerWorkspacePath} />}

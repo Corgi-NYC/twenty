@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { verifyEmailRedirectPathState } from '@/auth/states/verifyEmailRedirectPathState';
 import { useAuth } from '@/auth/hooks/useAuth';
 import { billingCheckoutSessionState } from '@/auth/states/billingCheckoutSessionState';
@@ -341,7 +342,7 @@ const UpgradeFreeTrialContent = ({
             <span />
             <Button
               variant="link"
-              href={calendarBookingPageId ? AppPath.BookCall : CAL_LINK}
+              href={calendarBookingPageId ? addFrontendBasePath(AppPath.BookCall) : CAL_LINK}
               target={calendarBookingPageId ? '_self' : '_blank'}
               rel={calendarBookingPageId ? '' : 'noreferrer'}
             >

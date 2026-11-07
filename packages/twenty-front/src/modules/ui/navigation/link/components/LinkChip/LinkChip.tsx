@@ -1,3 +1,4 @@
+import { resolveFrontendUrl } from '~/utils/frontendBasePath';
 import { css } from '@linaria/core';
 import { type LinkChipProps } from './types/LinkChipProps';
 
@@ -34,7 +35,7 @@ export const LinkChip = ({
         {...props}
         render={
           <a
-            href={to}
+            href={resolveFrontendUrl(to)}
             ref={ref}
             onClick={(event) => {
               event.stopPropagation();

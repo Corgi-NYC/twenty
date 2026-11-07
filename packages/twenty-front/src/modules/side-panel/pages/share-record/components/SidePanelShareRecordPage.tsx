@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { isDefined } from 'twenty-shared/utils';
 
 import { useObjectMetadataItemById } from '@/object-metadata/hooks/useObjectMetadataItemById';
@@ -31,9 +32,11 @@ const SidePanelShareRecordPageContent = ({
         objectLabelPlural={objectMetadataItem.labelPlural}
         recordUrl={
           new URL(
-            getLinkToShowPage(objectMetadataItem.nameSingular, {
-              id: target.recordId,
-            }),
+            addFrontendBasePath(
+              getLinkToShowPage(objectMetadataItem.nameSingular, {
+                id: target.recordId,
+              }),
+            ),
             window.location.origin,
           ).href
         }

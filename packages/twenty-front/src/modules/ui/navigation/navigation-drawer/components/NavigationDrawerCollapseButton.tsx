@@ -1,3 +1,4 @@
+import { useIsEmbedded } from '@/app/hooks/useIsEmbedded';
 import { useIsSettingsDrawer } from '@/navigation/hooks/useIsSettingsDrawer';
 import { useNavigationDrawerTogglePresentation } from '@/ui/navigation/navigation-drawer/hooks/useNavigationDrawerTogglePresentation';
 import { useToggleNavigationDrawer } from '@/ui/navigation/navigation-drawer/hooks/useToggleNavigationDrawer';
@@ -16,6 +17,7 @@ export const NavigationDrawerCollapseButton = ({
   size,
 }: NavigationDrawerCollapseButtonProps) => {
   const isMobile = useIsMobile();
+  const isEmbedded = useIsEmbedded();
   const isSettingsDrawer = useIsSettingsDrawer();
   const { toggleNavigationDrawer } = useToggleNavigationDrawer();
   const { label, Icon } = useNavigationDrawerTogglePresentation(
@@ -25,7 +27,7 @@ export const NavigationDrawerCollapseButton = ({
     useNavigationDrawerExpandButtonFocusHandOff();
 
   // The main navigation is a page on mobile, so there is no drawer to toggle.
-  if (isMobile && !isSettingsDrawer) {
+  if (isEmbedded || (isMobile && !isSettingsDrawer)) {
     return null;
   }
 

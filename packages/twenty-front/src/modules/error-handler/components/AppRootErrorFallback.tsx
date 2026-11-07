@@ -91,11 +91,11 @@ export const AppRootErrorFallback = ({
         <StyledEmptyContainer>
           <StyledImageContainer>
             <StyledBackgroundImage
-              src="/images/placeholders/background/error_index_bg.png"
+              src={`${import.meta.env.BASE_URL}images/placeholders/background/error_index_bg.png`}
               alt={t`Background`}
             />
             <StyledInnerImage
-              src="/images/placeholders/moving-image/error_index.png"
+              src={`${import.meta.env.BASE_URL}images/placeholders/moving-image/error_index.png`}
               alt={t`Error illustration`}
             />
           </StyledImageContainer>

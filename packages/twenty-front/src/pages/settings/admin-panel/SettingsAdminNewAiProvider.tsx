@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { AI_ADMIN_PATH } from '@/settings/admin-panel/ai/constants/AiAdminPath';
 import { AI_PROVIDER_SOURCE } from '@/settings/admin-panel/ai/constants/AiProviderSource';
 import { getDataResidencyOptions } from '@/settings/admin-panel/ai/constants/DataResidencyOptions';
@@ -313,7 +314,7 @@ export const SettingsAdminNewAiProvider = () => {
               status="error"
               action={
                 <InlineBanner.Action
-                  href={getSettingsPath(SettingsPath.AdminPanelOrganization)}
+                  href={addFrontendBasePath(getSettingsPath(SettingsPath.AdminPanelOrganization))}
                   nativeButton={false}
                   role="link"
                   render={
@@ -359,7 +360,7 @@ export const SettingsAdminNewAiProvider = () => {
               status="info"
               action={
                 <InlineBanner.Action
-                  href={builtInProviderPath}
+                  href={addFrontendBasePath(builtInProviderPath)}
                   nativeButton={false}
                   role="link"
                   render={<Link to={builtInProviderPath} />}

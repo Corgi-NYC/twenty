@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { isDefined } from 'twenty-shared/utils';
 export const useBuildWorkspaceUrl = () => {
   const buildWorkspaceUrl = (
@@ -8,7 +9,7 @@ export const useBuildWorkspaceUrl = () => {
     const url = new URL(endpoint);
 
     if (isDefined(pathname)) {
-      url.pathname = pathname;
+      url.pathname = addFrontendBasePath(pathname);
     }
 
     if (isDefined(searchParams)) {

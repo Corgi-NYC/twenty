@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { useStore } from 'jotai';
 import { useCallback } from 'react';
 import { AppPath } from 'twenty-shared/types';
@@ -23,7 +24,7 @@ export const useProjectAiChatThreadToUrl = ({
 
   const projectAiChatThreadToUrl = useCallback(
     (threadId: string) => {
-      const pathname = window.location.pathname;
+      const pathname = getFrontendPathname();
       const isOnInboxPage = isAiChatInboxPath(pathname);
       const isInboxClosed = isMatchingPathname(
         pathname,

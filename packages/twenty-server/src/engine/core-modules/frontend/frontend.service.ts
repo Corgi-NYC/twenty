@@ -39,7 +39,7 @@ export class FrontendService {
     private readonly workspaceDomainsService: WorkspaceDomainsService,
     private readonly workspaceCacheService: WorkspaceCacheService,
     @Inject('FRONTEND_PATH') readonly frontPath: string,
-    twentyConfigService: TwentyConfigService,
+    private readonly twentyConfigService: TwentyConfigService,
   ) {
     this.indexUrl = twentyConfigService.get('FRONTEND_INDEX_URL');
 
@@ -217,6 +217,12 @@ export class FrontendService {
       response.type('html').end(
         renderFrontendHtml({
           template,
+          frontendConfig: {
+            REACT_APP_FRONTEND_BASE_PATH:
+              this.twentyConfigService.get('FRONTEND_BASE_PATH'),
+            REACT_APP_SERVER_BASE_URL:
+              this.twentyConfigService.get('SERVER_URL').replace(/\/$/, ''),
+          },
           clientConfig,
           iframeMediaPermissions,
         }),

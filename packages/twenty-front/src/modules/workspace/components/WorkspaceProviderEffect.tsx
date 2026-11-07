@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { isMultiWorkspaceEnabledState } from '@/client-config/states/isMultiWorkspaceEnabledState';
 import { useReadWorkspaceUrlFromCurrentLocation } from '@/domain-manager/hooks/useReadWorkspaceUrlFromCurrentLocation';
 import { useRedirectToWorkspaceDomain } from '@/domain-manager/hooks/useRedirectToWorkspaceDomain';
@@ -52,7 +53,7 @@ export const WorkspaceProviderEffect = () => {
     ) {
       redirectToWorkspaceDomain(
         getWorkspaceUrl(getPublicWorkspaceData.workspaceUrls),
-        window.location.pathname,
+        getFrontendPathname(),
         getCurrentSearchParams(),
       );
     }
@@ -76,7 +77,7 @@ export const WorkspaceProviderEffect = () => {
       initializeQueryParamState();
       redirectToWorkspaceDomain(
         lastAuthenticatedWorkspaceDomain.workspaceUrl,
-        window.location.pathname,
+        getFrontendPathname(),
         getCurrentSearchParams(),
       );
     }

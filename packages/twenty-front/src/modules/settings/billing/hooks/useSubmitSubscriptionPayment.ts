@@ -1,3 +1,4 @@
+import { addFrontendBasePath } from '~/utils/frontendBasePath';
 import { getToastOptionsFromError } from '@/error-handler/utils/getToastOptionsFromError';
 import { CombinedGraphQLErrors } from '@apollo/client/errors';
 import { useMutation } from '@apollo/client/react';
@@ -70,7 +71,7 @@ export const useSubmitSubscriptionPayment = ({
       }
 
       const returnUrl = new URL(
-        AppPath.PlanRequiredSuccess,
+        addFrontendBasePath(AppPath.PlanRequiredSuccess),
         window.location.origin,
       ).toString();
 

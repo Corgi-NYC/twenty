@@ -1,3 +1,4 @@
+import { REACT_APP_FRONTEND_BASE_PATH } from '~/config';
 import { lazy, useState } from 'react';
 import {
   createBrowserRouter,
@@ -73,6 +74,7 @@ const createRootAppRouter = () =>
         />
       </Route>,
     ),
+    { basename: REACT_APP_FRONTEND_BASE_PATH },
   );
 
 export const useCreateRootAppRouter = () => {

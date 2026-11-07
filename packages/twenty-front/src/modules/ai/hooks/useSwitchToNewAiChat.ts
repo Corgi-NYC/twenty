@@ -1,3 +1,4 @@
+import { getFrontendPathname } from '~/utils/frontendBasePath';
 import { useStore } from 'jotai';
 
 import { useNavigateToAiChatPage } from '@/ai/hooks/useNavigateToAiChatPage';
@@ -21,7 +22,7 @@ export const useSwitchToNewAiChat = ({
   const { navigateToAiChatPage } = useNavigateToAiChatPage();
 
   const switchToNewChat = () => {
-    const isOnInboxPage = isAiChatInboxPath(window.location.pathname);
+    const isOnInboxPage = isAiChatInboxPath(getFrontendPathname());
 
     if (!isOnInboxPage) {
       store.set(agentChatNewThreadChannelIdState.atom, null);

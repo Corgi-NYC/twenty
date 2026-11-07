@@ -33,8 +33,8 @@ import {
 } from '~/generated-metadata/graphql';
 import { useLingui } from '@lingui/react/macro';
 
-const AI_HERO_LIGHT = '/images/ai/ai-tools-cover-light.png';
-const AI_HERO_DARK = '/images/ai/ai-tools-cover-dark.png';
+const AI_HERO_LIGHT = `${import.meta.env.BASE_URL}images/ai/ai-tools-cover-light.png`;
+const AI_HERO_DARK = `${import.meta.env.BASE_URL}images/ai/ai-tools-cover-dark.png`;
 
 const SETTINGS_AI_HERO_INSTANCE_ID_PREFIX = 'settings-ai-hero';
 
