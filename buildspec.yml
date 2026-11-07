@@ -1,0 +1,47 @@
+version: 0.2
+# Bullpen CRM (Twenty fork) -> ECR -> ECS bullpen-core/bullpen-crm. Same shape as the
+# corgi-bullpen-backend/mcp buildspecs (push to the deploy branch -> CodeBuild -> rolling deploy).
+env:
+  variables:
+    AWS_DEFAULT_REGION: "us-east-2"
+    AWS_ACCOUNT_ID: "991166714455"
+    ECR_REPO: "991166714455.dkr.ecr.us-east-2.amazonaws.com/bullpen-crm"
+    ECS_CLUSTER: "bullpen-core"
+    ECS_SERVICE: "bullpen-crm"
+    TASK_FAMILY: "bullpen-crm"
+    FRONTEND_BASE_PATH: "/crm-app"
+phases:
+  install:
+    commands:
+      - command -v jq >/dev/null 2>&1 || (yum install -y jq || true)
+  pre_build:
+    commands:
+      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock >/tmp/dockerd.log 2>&1 &
+      - timeout 15 sh -c "until docker info >/dev/null 2>&1; do sleep 1; done"
+      - aws ecr get-login-password --region "$AWS_DEFAULT_REGION" | docker login --username AWS --password-stdin "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com"
+      - IMAGE_TAG="pt-$(echo "$CODEBUILD_RESOLVED_SOURCE_VERSION" | cut -c1-7)"
+      - echo "$IMAGE_TAG" > /tmp/image_tag.txt
+  build:
+    commands:
+      - IMAGE_TAG=$(cat /tmp/image_tag.txt)
+      - echo "Building $ECR_REPO:$IMAGE_TAG (target twenty, base path $FRONTEND_BASE_PATH, linux/arm64)..."
+      - docker build --target twenty --build-arg FRONTEND_BASE_PATH="$FRONTEND_BASE_PATH" --build-arg APP_VERSION="$IMAGE_TAG" -t "$ECR_REPO:$IMAGE_TAG" -t "$ECR_REPO:latest" -f packages/twenty-docker/twenty/Dockerfile .
+  post_build:
+    commands:
+      - IMAGE_TAG=$(cat /tmp/image_tag.txt)
+      - NEW_IMAGE="$ECR_REPO:$IMAGE_TAG"
+      - docker push "$NEW_IMAGE"
+      - docker push "$ECR_REPO:latest"
+      - |
+        if aws ecs describe-task-definition --task-definition "$TASK_FAMILY" --query 'taskDefinition' > task-def.json 2>/dev/null; then
+          jq --arg IMG "$NEW_IMAGE" '.containerDefinitions = (.containerDefinitions | map(if (.name == "twenty" or .name == "worker") then .image = $IMG else . end)) | del(.taskDefinitionArn, .revision, .status, .requiresAttributes, .compatibilities, .registeredAt, .registeredBy, .deregisteredAt)' task-def.json > new-task-def.json
+          NEW_TASK_DEF_ARN=$(aws ecs register-task-definition --cli-input-json file://new-task-def.json --query 'taskDefinition.taskDefinitionArn' --output text)
+          echo "Registered $NEW_TASK_DEF_ARN"
+          if aws ecs describe-services --cluster "$ECS_CLUSTER" --services "$ECS_SERVICE" --query 'services[0].status' --output text 2>/dev/null | grep -q ACTIVE; then
+            aws ecs update-service --cluster "$ECS_CLUSTER" --service "$ECS_SERVICE" --task-definition "$NEW_TASK_DEF_ARN" --query 'service.taskDefinition' --output text
+          else
+            echo "Service $ECS_SERVICE not created yet; image and task definition are ready."
+          fi
+        else
+          echo "No task definition family $TASK_FAMILY yet; image pushed, first task def is created by hand."
+        fi
