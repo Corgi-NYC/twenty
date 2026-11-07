@@ -1,5 +1,5 @@
 import { recordIndexAllRecordIdsComponentSelector } from '@/object-record/record-index/states/selectors/recordIndexAllRecordIdsComponentSelector';
-import { RECORD_TABLE_ROW_HEIGHT } from '@/object-record/record-table/constants/RecordTableRowHeight';
+import { getRecordTableRowHeight } from '@/object-record/record-table/utils/getRecordTableRowHeight';
 import { useRecordTableContextOrThrow } from '@/object-record/record-table/contexts/RecordTableContext';
 import { getRecordTableCellId } from '@/object-record/record-table/utils/getRecordTableCellId';
 import { focusedRecordTableRowIndexComponentState } from '@/object-record/record-table/states/focusedRecordTableRowIndexComponentState';
@@ -50,8 +50,8 @@ export const RecordTableScrollToFocusedRowEffect = () => {
       return;
     }
 
-    focusElement.style.scrollMarginBottom = `${RECORD_TABLE_ROW_HEIGHT}px`;
-    focusElement.style.scrollMarginTop = `${RECORD_TABLE_ROW_HEIGHT}px`;
+    focusElement.style.scrollMarginBottom = `${getRecordTableRowHeight()}px`;
+    focusElement.style.scrollMarginTop = `${getRecordTableRowHeight()}px`;
 
     focusElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 

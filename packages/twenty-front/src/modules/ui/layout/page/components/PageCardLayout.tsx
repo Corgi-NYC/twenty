@@ -122,7 +122,7 @@ export const PageCardLayout = ({
   return (
     <StyledRoot data-page-surface="main">
       <StyledMainCardWrapper>
-        <StyledCard>
+        <StyledCard data-page-card="">
           <StyledPrintHidden>{header}</StyledPrintHidden>
           {shouldShowInformationBanner && (
             <StyledPrintHidden>

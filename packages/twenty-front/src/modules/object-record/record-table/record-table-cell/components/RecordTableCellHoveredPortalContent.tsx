@@ -77,6 +77,7 @@ export const RecordTableCellHoveredPortalContent = () => {
 
   return (
     <StyledRecordTableCellHoveredPortalContent
+      data-table-cell-overlay="hovered"
       showInteractiveStyle={showInteractiveStyle}
       isRecordTableRowActive={isRecordTableRowActive}
     >

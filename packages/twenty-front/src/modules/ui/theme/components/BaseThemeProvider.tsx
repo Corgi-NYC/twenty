@@ -1,3 +1,4 @@
+import { useIsEmbedded } from '@/app/hooks/useIsEmbedded';
 import { type JSX, createContext } from 'react';
 
 // Salesfarce: remove with the theme
@@ -28,8 +29,10 @@ export const BaseThemeProvider = ({ children }: BaseThemeProviderProps) => {
   // Salesfarce: remove with the theme
   const salesfarceIsActive = useAtomStateValue(salesfarceIsActiveState);
   const systemColorScheme = useSystemColorScheme();
-  const effectiveColorScheme =
-    persistedColorScheme === 'System'
+  const isEmbedded = useIsEmbedded();
+  const effectiveColorScheme = isEmbedded
+    ? 'Light'
+    : persistedColorScheme === 'System'
       ? systemColorScheme
       : persistedColorScheme;
 

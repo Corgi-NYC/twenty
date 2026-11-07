@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react';
 import { useStore } from 'jotai';
 
-import { RECORD_TABLE_ROW_HEIGHT } from '@/object-record/record-table/constants/RecordTableRowHeight';
+import { getRecordTableRowHeight } from '@/object-record/record-table/utils/getRecordTableRowHeight';
 import { ROW_SLOT_COUNT } from '@/object-record/record-table/virtualization/constants/RowSlotCount';
 import { useProcessScrollTop } from '@/object-record/record-table/virtualization/hooks/useProcessScrollTop';
 import { useTriggerFetchPages } from '@/object-record/record-table/virtualization/hooks/useTriggerFetchPages';
@@ -175,7 +175,7 @@ export const RecordTableVirtualizedScrollEffect = () => {
           scrollSpeedInPixelsPerSecondSum / scrollMeasurementsForAverage.length;
 
         const averageScrollSpeedInRowsPerSecond =
-          averageScrollSpeedInPixelsPerSecond / (RECORD_TABLE_ROW_HEIGHT + 1);
+          averageScrollSpeedInPixelsPerSecond / (getRecordTableRowHeight() + 1);
 
         if (
           averageScrollSpeedInRowsPerSecond >

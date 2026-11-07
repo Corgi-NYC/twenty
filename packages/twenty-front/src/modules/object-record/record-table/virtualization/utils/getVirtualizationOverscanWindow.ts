@@ -1,4 +1,4 @@
-import { RECORD_TABLE_ROW_HEIGHT } from '@/object-record/record-table/constants/RecordTableRowHeight';
+import { getRecordTableRowHeight } from '@/object-record/record-table/utils/getRecordTableRowHeight';
 import { getRowIndexAtViewportMiddle } from '@/object-record/record-table/virtualization/utils/getRowIndexAtViewportMiddle';
 import { TABLE_VIRTUALIZATION_NUMBER_OF_OVERSCAN_PAGES } from '@/object-record/record-table/virtualization/constants/TableVirtualizationNumberOfOverscanPages';
 import { TABLE_VIRTUALIZATION_NUMBER_OF_RECORDS_PER_PAGE } from '@/object-record/record-table/virtualization/constants/TableVirtualizationNumberOfRecordsPerPage';
@@ -16,7 +16,7 @@ export const getVirtualizationOverscanWindow = ({
     scrollTop: scrollPosition,
     viewportHeight: Math.min(
       scrollWrapperHeight,
-      40 * (RECORD_TABLE_ROW_HEIGHT + 1),
+      40 * (getRecordTableRowHeight() + 1),
     ),
   });
 

@@ -1,4 +1,4 @@
-import { RECORD_TABLE_ROW_HEIGHT } from '@/object-record/record-table/constants/RecordTableRowHeight';
+import { getRecordTableRowHeight } from '@/object-record/record-table/utils/getRecordTableRowHeight';
 
 import { totalNumberOfRowsComponentState } from '@/object-record/record-table/virtualization/states/totalNumberOfRowsComponentState';
 import { useAtomComponentStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomComponentStateValue';
@@ -23,7 +23,7 @@ export const RecordTableVirtualizedBodyPlaceholder = () => {
   );
 
   const totalHeight = isDefined(totalNumberOfRows)
-    ? totalNumberOfRows * (RECORD_TABLE_ROW_HEIGHT + 1)
+    ? totalNumberOfRows * (getRecordTableRowHeight() + 1)
     : 0;
 
   return <StyledVirtualizationContainer height={totalHeight} />;

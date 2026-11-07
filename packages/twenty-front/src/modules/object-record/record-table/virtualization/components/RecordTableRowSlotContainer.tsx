@@ -21,6 +21,7 @@ export const RecordTableRowSlotContainer = ({
   children,
 }: RecordTableRowSlotContainerProps) => (
   <StyledRowSlotContainer
+    data-table-row-slot=""
     ref={ref}
     style={style}
     data-replay-ignore-mutations="true"

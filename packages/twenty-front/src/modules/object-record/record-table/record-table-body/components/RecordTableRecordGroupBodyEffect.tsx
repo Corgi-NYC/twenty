@@ -6,7 +6,7 @@ import { useCurrentRecordGroupId } from '@/object-record/record-group/hooks/useC
 import { useRecordIndexTableQuery } from '@/object-record/record-index/hooks/useRecordIndexTableQuery';
 import { recordIndexHasFetchedAllRecordsByGroupComponentState } from '@/object-record/record-index/states/recordIndexHasFetchedAllRecordsByGroupComponentState';
 
-import { RECORD_TABLE_ROW_HEIGHT } from '@/object-record/record-table/constants/RecordTableRowHeight';
+import { getRecordTableRowHeight } from '@/object-record/record-table/utils/getRecordTableRowHeight';
 import { useRecordTableContextOrThrow } from '@/object-record/record-table/contexts/RecordTableContext';
 import { useSetRecordTableData } from '@/object-record/record-table/hooks/internal/useSetRecordTableData';
 import { isRecordTableInitialLoadingComponentState } from '@/object-record/record-table/states/isRecordTableInitialLoadingComponentState';
@@ -70,7 +70,7 @@ export const RecordTableRecordGroupBodyEffect = () => {
       );
 
       if (recordPosition !== -1) {
-        const positionInPx = recordPosition * RECORD_TABLE_ROW_HEIGHT;
+        const positionInPx = recordPosition * getRecordTableRowHeight();
 
         scrollToPosition(positionInPx);
       }

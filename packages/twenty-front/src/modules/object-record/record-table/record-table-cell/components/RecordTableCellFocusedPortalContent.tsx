@@ -63,6 +63,7 @@ export const RecordTableCellFocusedPortalContent = () => {
 
   return (
     <StyledRecordTableCellFocusPortalContent
+      data-table-cell-overlay="focused"
       isRecordTableRowActive={isRecordTableRowActive}
       onMouseMove={handleContainerMouseMove}
     >

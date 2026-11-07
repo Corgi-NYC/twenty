@@ -1,3 +1,4 @@
+import '@/app/styles/embedded.css';
 import { useIsEmbedded } from '@/app/hooks/useIsEmbedded';
 import { AppErrorBoundary } from '@/error-handler/components/AppErrorBoundary';
 import { AppFullScreenErrorFallback } from '@/error-handler/components/AppFullScreenErrorFallback';
@@ -23,6 +24,10 @@ const StyledLayout = styled.div`
   scrollbar-color: ${themeCssVariables.border.color.medium} transparent;
   scrollbar-width: 4px;
   width: 100%;
+
+  &[data-embedded='true'] {
+    background: #f6f6f6;
+  }
 
   *::-webkit-scrollbar-thumb {
     border-radius: ${themeCssVariables.border.radius.md};
@@ -70,7 +75,7 @@ export const DefaultLayout = () => {
   return (
     <>
       <FileUploadProvider>
-        <StyledLayout>
+        <StyledLayout data-embedded={isEmbedded}>
           <AppErrorBoundary FallbackComponent={AppFullScreenErrorFallback}>
             <InformationBannerIsImpersonating />
             <LayoutCustomizationBar />

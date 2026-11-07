@@ -1,6 +1,6 @@
 import { lastShowPageRecordIdState } from '@/object-record/record-field/ui/states/lastShowPageRecordId';
 import { recordIndexAllRecordIdsComponentSelector } from '@/object-record/record-index/states/selectors/recordIndexAllRecordIdsComponentSelector';
-import { RECORD_TABLE_ROW_HEIGHT } from '@/object-record/record-table/constants/RecordTableRowHeight';
+import { getRecordTableRowHeight } from '@/object-record/record-table/utils/getRecordTableRowHeight';
 import { useScrollTableToPosition } from '@/object-record/record-table/hooks/useScrollTableToPosition';
 import { useProcessScrollTop } from '@/object-record/record-table/virtualization/hooks/useProcessScrollTop';
 import { useTriggerFetchPages } from '@/object-record/record-table/virtualization/hooks/useTriggerFetchPages';
@@ -58,7 +58,7 @@ export const RecordTableNoRecordGroupScrollToPreviousRecordEffect = () => {
       const tableScrollWrapperHeight = scrollWrapperElement?.clientHeight ?? 0;
 
       const numberOfRowsDisplayedInTable = Math.min(
-        Math.floor(tableScrollWrapperHeight / (RECORD_TABLE_ROW_HEIGHT + 1)),
+        Math.floor(tableScrollWrapperHeight / (getRecordTableRowHeight() + 1)),
         30,
       );
 
@@ -66,12 +66,13 @@ export const RecordTableNoRecordGroupScrollToPreviousRecordEffect = () => {
         numberOfRowsDisplayedInTable / 2,
       );
 
-      const recordPositionInPx = recordPosition * (RECORD_TABLE_ROW_HEIGHT + 1);
+      const recordPositionInPx =
+        recordPosition * (getRecordTableRowHeight() + 1);
 
       const targetScrollPositionInPx = Math.max(
         0,
         recordPositionInPx -
-          halfNumberOfRowsVisible * (RECORD_TABLE_ROW_HEIGHT + 1),
+          halfNumberOfRowsVisible * (getRecordTableRowHeight() + 1),
       );
 
       scrollTableToPosition({

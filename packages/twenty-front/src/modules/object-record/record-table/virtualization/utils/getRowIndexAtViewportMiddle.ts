@@ -1,4 +1,4 @@
-import { RECORD_TABLE_ROW_HEIGHT } from '@/object-record/record-table/constants/RecordTableRowHeight';
+import { getRecordTableRowHeight } from '@/object-record/record-table/utils/getRecordTableRowHeight';
 
 export const getRowIndexAtViewportMiddle = ({
   scrollTop,
@@ -7,7 +7,7 @@ export const getRowIndexAtViewportMiddle = ({
   scrollTop: number;
   viewportHeight: number;
 }): number => {
-  const rowHeight = RECORD_TABLE_ROW_HEIGHT + 1;
+  const rowHeight = getRecordTableRowHeight() + 1;
 
   return (
     Math.floor(scrollTop / rowHeight) +
