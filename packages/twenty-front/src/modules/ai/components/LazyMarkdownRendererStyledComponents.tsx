@@ -129,7 +129,7 @@ export const StyledMarkdownContainer = styled.div<{
   }
 
   :not(pre) > code[style*='cursor: pointer']:hover {
-    background-color: ${themeCssVariables.background.transparent.blue};
+    background-color: ${themeCssVariables.accent.accent3};
   }
 
   .markdown-code-outer-container {

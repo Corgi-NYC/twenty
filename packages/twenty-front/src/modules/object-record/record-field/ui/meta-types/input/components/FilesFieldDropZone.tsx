@@ -7,7 +7,7 @@ const StyledFilesFieldDropZone = styled.div<{ isDragActive: boolean }>`
   border-radius: ${themeCssVariables.border.radius.md};
   outline: ${({ isDragActive }) =>
     isDragActive
-      ? `1px dashed ${themeCssVariables.border.color.blue}`
+      ? `1px dashed ${themeCssVariables.accent.accent9}`
       : 'none'};
   outline-offset: -1px;
   width: 100%;

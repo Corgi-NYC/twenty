@@ -95,7 +95,7 @@ const StyledMode = styled.button<{ isActive: boolean; isExpanded: boolean }>`
   }
 
   &:focus-visible {
-    outline: 2px solid ${themeCssVariables.color.blue};
+    outline: 2px solid ${themeCssVariables.accent.accent9};
     outline-offset: 1px;
   }
 `;

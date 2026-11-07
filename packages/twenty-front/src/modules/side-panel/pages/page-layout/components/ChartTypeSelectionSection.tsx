@@ -36,8 +36,8 @@ const StyledChartTypeButton = styled(Button)`
   }
 
   &[aria-pressed='true'] {
-    border-color: ${themeCssVariables.color.blue};
-    color: ${themeCssVariables.color.blue};
+    border-color: ${themeCssVariables.accent.accent9};
+    color: ${themeCssVariables.accent.accent9};
 
     &:hover {
       background: ${themeCssVariables.background.transparent.primary};

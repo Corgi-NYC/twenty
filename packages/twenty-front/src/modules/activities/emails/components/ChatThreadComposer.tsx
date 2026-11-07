@@ -38,7 +38,7 @@ const StyledInputBox = styled.div`
   padding: ${themeCssVariables.spacing[2]};
 
   &:focus-within {
-    border-color: ${themeCssVariables.color.blue};
+    border-color: ${themeCssVariables.accent.accent9};
   }
 `;
 

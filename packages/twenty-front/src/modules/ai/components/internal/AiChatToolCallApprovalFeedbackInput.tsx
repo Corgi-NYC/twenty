@@ -16,7 +16,7 @@ const StyledFeedbackTextarea = styled(TextareaAutosize)`
   resize: none;
 
   &:focus-visible {
-    border-color: ${themeCssVariables.color.blue};
+    border-color: ${themeCssVariables.accent.accent9};
   }
 `;
 

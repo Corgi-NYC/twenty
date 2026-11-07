@@ -60,7 +60,7 @@ const StyledRowContainer = styled.div<{ $isDropTarget: boolean }>`
   align-items: center;
   background-color: ${({ $isDropTarget }) =>
     $isDropTarget
-      ? themeCssVariables.background.transparent.blue
+      ? themeCssVariables.accent.accent3
       : 'transparent'};
   border-radius: ${themeCssVariables.border.radius.sm};
   box-sizing: border-box;
@@ -71,7 +71,7 @@ const StyledRowContainer = styled.div<{ $isDropTarget: boolean }>`
   max-height: 96px;
   min-height: 24px;
   outline: ${({ $isDropTarget }) =>
-    $isDropTarget ? `1px solid ${themeCssVariables.color.blue}` : 'none'};
+    $isDropTarget ? `1px solid ${themeCssVariables.accent.accent9}` : 'none'};
   outline-offset: -1px;
   overflow-y: auto;
   padding: ${themeCssVariables.spacing[1]} 0;
@@ -95,7 +95,7 @@ const StyledInput = styled.input`
   padding: 0;
 
   &:focus-visible {
-    outline: 2px solid ${themeCssVariables.color.blue};
+    outline: 2px solid ${themeCssVariables.accent.accent9};
     outline-offset: 1px;
   }
 

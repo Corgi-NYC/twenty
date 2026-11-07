@@ -55,7 +55,7 @@ const StyledPromptButton = styled.button`
   }
 
   &:focus-visible {
-    outline: 2px solid ${themeCssVariables.border.color.blue};
+    outline: 2px solid ${themeCssVariables.accent.accent9};
     outline-offset: 2px;
   }
 `;
