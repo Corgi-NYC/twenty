@@ -260,7 +260,7 @@ export const SettingsAvailableApplicationDetails = () => {
             <InlineBanner
               status="warning"
               icon={<IconEyeOff aria-hidden="true" />}
-            >{t`This application is not listed on the marketplace and has not been reviewed by Twenty. Use at your own risk.`}</InlineBanner>
+            >{t`This application is not listed on the marketplace and has not been reviewed by Corgi. Use at your own risk.`}</InlineBanner>
           )}
           {renderContent()}
         </SettingsPageContainer>

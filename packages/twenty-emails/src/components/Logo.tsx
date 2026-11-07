@@ -12,8 +12,8 @@ type LogoProps = {
 export const Logo = ({ i18n }: LogoProps) => {
   return (
     <Img
-      src="https://app.twenty.com/images/icons/windows11/Square150x150Logo.scale-100.png"
-      alt={i18n._('Twenty logo')}
+      src="https://coolify.tail908fbf.ts.net:10003/images/icons/ios/180.png"
+      alt={i18n._('Bullpen logo')}
       width="40"
       height="40"
       style={logoStyle}

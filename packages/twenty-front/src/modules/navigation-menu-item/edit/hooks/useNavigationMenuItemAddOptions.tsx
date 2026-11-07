@@ -177,7 +177,7 @@ export const useNavigationMenuItemAddOptions = ({
           onClick: () => {
             addItem({
               type: NavigationMenuItemType.LINK,
-              name: 'Twenty',
+              name: 'Bullpen',
               link: 'https://twenty.com',
               color: DEFAULT_NAVIGATION_MENU_ITEM_COLOR_LINK,
             });

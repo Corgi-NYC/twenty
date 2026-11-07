@@ -59,7 +59,7 @@ export const SettingsPrivacyAiDataProcessing = () => {
       <Section.Root>
         <Section.Header
           title={t`AI data processing`}
-          description={t`Twenty has no AI model of its own. Choose which providers may process your requests. Stricter settings leave fewer models, and some cost more.`}
+          description={t`Bullpen has no AI model of its own. Choose which providers may process your requests. Stricter settings leave fewer models, and some cost more.`}
         />
         <Card.Root>
           {dataResidencyRegions.length > 0 && (

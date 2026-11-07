@@ -36,7 +36,7 @@ export const SettingsPrivacySafeguards = () => {
     {
       Icon: IconCpu,
       title: t`No training on your data`,
-      description: t`No AI provider trains on your data, and neither does Twenty`,
+      description: t`No AI provider trains on your data, and neither does Bullpen`,
     },
     {
       Icon: IconHistory,
@@ -59,7 +59,7 @@ export const SettingsPrivacySafeguards = () => {
     <Section.Root>
       <Section.Header
         title={t`How your data is protected`}
-        description={t`The safeguards behind every Twenty Cloud workspace.`}
+        description={t`The safeguards behind every Bullpen Cloud workspace.`}
       />
       <Card.Root>
         {safeguards.map(({ Icon, title, description }) => (
