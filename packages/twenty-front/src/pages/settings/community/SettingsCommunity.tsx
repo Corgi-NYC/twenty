@@ -111,7 +111,7 @@ export const SettingsCommunity = () => {
         <Section.Root>
           <Section.Header
             title={t`Partners`}
-            description={t`Hire a partner to help you implement and customize Twenty.`}
+            description={t`Hire a partner to help you implement and customize Bullpen.`}
           />
           <SettingsCard
             href="https://twenty.com/partners/list"
