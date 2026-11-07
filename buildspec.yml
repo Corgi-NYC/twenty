@@ -7,7 +7,7 @@ env:
     AWS_ACCOUNT_ID: "991166714455"
     ECR_REPO: "991166714455.dkr.ecr.us-east-2.amazonaws.com/bullpen-crm"
     ECS_CLUSTER: "bullpen-core"
-    ECS_SERVICE: "bullpen-crm"
+    ECS_SERVICE: "bullpen-crm-svc"
     TASK_FAMILY: "bullpen-crm"
     FRONTEND_BASE_PATH: "/crm-app"
 phases:
@@ -25,7 +25,7 @@ phases:
     commands:
       - IMAGE_TAG=$(cat /tmp/image_tag.txt)
       - echo "Building $ECR_REPO:$IMAGE_TAG (target twenty, base path $FRONTEND_BASE_PATH, linux/arm64)..."
-      - docker build --target twenty --build-arg FRONTEND_BASE_PATH="$FRONTEND_BASE_PATH" --build-arg APP_VERSION="$IMAGE_TAG" -t "$ECR_REPO:$IMAGE_TAG" -t "$ECR_REPO:latest" -f packages/twenty-docker/twenty/Dockerfile .
+      - docker build --target twenty --build-arg FRONTEND_BASE_PATH="$FRONTEND_BASE_PATH" --build-arg APP_VERSION="2.56.1" -t "$ECR_REPO:$IMAGE_TAG" -t "$ECR_REPO:latest" -f packages/twenty-docker/twenty/Dockerfile .
   post_build:
     commands:
       - IMAGE_TAG=$(cat /tmp/image_tag.txt)
