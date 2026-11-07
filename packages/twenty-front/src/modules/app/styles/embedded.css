@@ -32,7 +32,8 @@
 [data-embedded='true'] [data-page-header] {
   background: transparent;
   border: 0;
-  grid-template-columns: minmax(0, 1fr) auto;
+  /* The actions group measures its own width to decide what to fold into the "more" menu; give it room. */
+  grid-template-columns: minmax(0, 1fr) minmax(360px, max-content);
   min-height: 34px;
   padding: 0 0 24px;
 }
@@ -69,8 +70,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  justify-self: end;
-  min-width: max-content;
+  justify-self: stretch;
+  justify-content: flex-end;
+  min-width: 360px;
   width: auto;
   overflow: visible;
 }
